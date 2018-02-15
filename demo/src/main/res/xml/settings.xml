@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="Test">
+        <com.austingreco.imagelistpreference.ImageListPreference
+            android:title="Test"
+            android:summary="Something"
+            android:key="theme"
+            android:entries="@array/testEntries"
+            android:entryValues="@array/testEntryValues"
+            app:ilp_entryImages="@array/testEntryImages"
+            app:ilp_tint="#FF00FF00"
+            app:ilp_backgroundTint="#FFFF00FF"
+            app:ilp_errorImage="@android:drawable/ic_media_pause"
+            />
+    </PreferenceCategory>
+</PreferenceScreen>

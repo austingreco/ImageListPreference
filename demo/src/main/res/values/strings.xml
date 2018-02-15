@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">test</string>
+    <array name="testEntries">
+        <item>Hello</item>
+        <item>Hello2</item>
+        <item>Hello3</item>
+    </array>
+
+    <array name="testEntryValues">
+        <item>a</item>
+        <item>b</item>
+        <item>c</item>
+    </array>
+
+    <array name="testEntryImages">
+        <item>@android:drawable/ic_menu_delete</item>
+        <item>@android:drawable/ic_dialog_map</item>
+    </array>
+</resources>
