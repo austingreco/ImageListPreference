@@ -28,6 +28,11 @@ public class ImageListPreference extends ListPreference {
     private static final int DEFAULT_BACKGROUND_TINT = 0xFFFFFFFF;
 
     private int mErrorResource;
+    private List<Integer> mImages;
+    private int mTintColor;
+    private int mBackgroundColor;
+    private boolean mUseCard;
+    private int mCustomItemLayout;
 
     private class ImageListPreferenceAdapter extends ArrayAdapter<ImageListItem> {
         private List<ImageListItem> mItems;
@@ -113,10 +118,6 @@ public class ImageListPreference extends ListPreference {
         RadioButton radioButton;
     }
 
-    private List<Integer> mImages;
-    private int mTintColor;
-    private int mBackgroundColor;
-
     public ImageListPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
 
@@ -132,8 +133,10 @@ public class ImageListPreference extends ListPreference {
             String backgroundKey = array.getNonResourceString(R.styleable.ImageListPreference_ilp_backgroundTint);
 
             mTintColor = array.getColor(R.styleable.ImageListPreference_ilp_tint, DEFAULT_TINT);
-            mBackgroundColor = array.getColor(R.styleable.ImageListPreference_ilp_backgroundTint, DEFAULT_BACKGROUND_TINT);
+            mBackgroundColor = array.getColor(R.styleable.ImageListPreference_ilp_backgroundTint, 0);
             mErrorResource = array.getResourceId(R.styleable.ImageListPreference_ilp_errorImage, 0);
+            mUseCard = array.getBoolean(R.styleable.ImageListPreference_ilp_useCard, false);
+            mCustomItemLayout = array.getResourceId(R.styleable.ImageListPreference_ilp_itemLayout, 0);
 
             if (tintKey != null) {
                 mTintColor = sharedPreferences.getInt(tintKey, mTintColor);
@@ -169,7 +172,15 @@ public class ImageListPreference extends ListPreference {
             items.add(new ImageListItem(getEntries()[i], resource, (getEntryValues()[i]).equals(getValue())));
         }
 
-        ListAdapter adapter = new ImageListPreferenceAdapter(getContext(), R.layout.imagelistpreference_item, items);
+        int layout = R.layout.imagelistpreference_item;
+        if (mUseCard) {
+            layout = R.layout.imagelistpreference_item_card;
+        }
+        if (mCustomItemLayout != 0) {
+            layout = mCustomItemLayout;
+        }
+
+        ListAdapter adapter = new ImageListPreferenceAdapter(getContext(), layout, items);
         builder.setAdapter(adapter, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

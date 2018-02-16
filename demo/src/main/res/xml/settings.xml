@@ -2,17 +2,70 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <PreferenceCategory android:title="Test">
+    <PreferenceCategory android:title="ImageListPreference">
         <com.austingreco.imagelistpreference.ImageListPreference
-            android:title="Test"
-            android:summary="Something"
+            android:title="Simple Example"
+            android:summary="ilp_entryImages"
             android:key="theme"
             android:entries="@array/testEntries"
             android:entryValues="@array/testEntryValues"
             app:ilp_entryImages="@array/testEntryImages"
-            app:ilp_tint="#FF00FF00"
-            app:ilp_backgroundTint="#FFFF00FF"
+        />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="With Colors">
+        <com.austingreco.imagelistpreference.ImageListPreference
+            android:title="List With Tint Only"
+            android:summary="ilp_tint"
+            android:key="theme"
+            android:entries="@array/testEntries"
+            android:entryValues="@array/testEntryValues"
+            app:ilp_entryImages="@array/testEntryImages"
+            app:ilp_tint="@color/colorPrimary"
+        />
+        <com.austingreco.imagelistpreference.ImageListPreference
+            android:title="List With Custom Colors"
+            android:summary="ilp_tint and ilp_backgroundTint"
+            android:key="theme"
+            android:entries="@array/testEntries"
+            android:entryValues="@array/testEntryValues"
+            app:ilp_entryImages="@array/testEntryImages"
+            app:ilp_tint="@color/colorPrimary"
+            app:ilp_backgroundTint="@color/colorAccent"
+            app:ilp_errorImage="@android:drawable/ic_media_pause"
+        />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="With Card Wrapper">
+        <com.austingreco.imagelistpreference.ImageListPreference
+            android:title="Image with CardView wrapper"
+            android:summary="ilp_useCard"
+            android:key="card"
+            android:entries="@array/testEntries"
+            android:entryValues="@array/testEntryValues"
+            app:ilp_entryImages="@array/testEntryImages"
+            app:ilp_useCard="true"
+            />
+        <com.austingreco.imagelistpreference.ImageListPreference
+            android:title="Card and Custom Colors"
+            android:summary="ilp_useCard + ilp_tint and ilp_backgroundTint"
+            android:key="card_colors"
+            android:entries="@array/testEntries"
+            android:entryValues="@array/testEntryValues"
+            app:ilp_entryImages="@array/testEntryImages"
+            app:ilp_tint="@color/colorPrimary"
+            app:ilp_backgroundTint="@color/colorAccent"
+            app:ilp_useCard="true"
             app:ilp_errorImage="@android:drawable/ic_media_pause"
             />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="With Custom Item Layout">
+        <com.austingreco.imagelistpreference.ImageListPreference
+            android:title="Use a custom layout"
+            android:summary="ilp_itemLayout"
+            android:key="layout"
+            android:entries="@array/testEntries"
+            android:entryValues="@array/testEntryValues"
+            app:ilp_entryImages="@array/testEntryImages"
+            app:ilp_itemLayout="@layout/my_custom_item_layout"
+        />
     </PreferenceCategory>
 </PreferenceScreen>

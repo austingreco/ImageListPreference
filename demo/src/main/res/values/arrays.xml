@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="testEntries">
+        <item>Hello</item>
+        <item>Hello2</item>
+        <item>Hello3</item>
+        <item>Hello4</item>
+        <item>Hello5</item>
+        <item>Hello6</item>
+        <item>Hello7</item>
+    </array>
+
+    <array name="testEntryValues">
+        <item>a</item>
+        <item>b</item>
+        <item>c</item>
+        <item>d</item>
+        <item>e</item>
+        <item>f</item>
+        <item>g</item>
+    </array>
+
+    <array name="testEntryImages">
+        <item>@drawable/ic_android_black_24dp</item>
+        <item>@drawable/ic_camera_black_24dp</item>
+        <item>@drawable/ic_fingerprint_black_24dp</item>
+        <item>@drawable/ic_headset_mic_black_24dp</item>
+        <item>@drawable/ic_local_florist_black_24dp</item>
+        <item>@drawable/ic_public_black_24dp</item>
+        <item>@drawable/ic_security_black_24dp</item>
+    </array>
+</resources>
