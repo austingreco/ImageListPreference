@@ -3,12 +3,20 @@
 <a target="_blank" href="https://developer.android.com/about/versions/android-4.0.3.html"><img src="https://img.shields.io/badge/API-15%2B-blue.svg?style=flat" alt="API Version 15" /></a>
 <a target="_blank" href="LICENSE"><img src="http://img.shields.io/:license-mit-blue.svg" alt="License" /></a>
 
-A `ListPreference` that shows an image resource for each item.
+A [`ListPreference`](https://developer.android.com/reference/android/preference/ListPreference.html) that shows an image resource for each item.
 
-<img src="images/screenshot1.png" width="290" alt="Screenshot 1">
-<img src="images/screenshot2.png" width="290" alt="Screenshot 2">
+![](https://raw.githubusercontent.com/austingreco/ImageListPreference/master/images/screenshot1.png | width=290)
+![](https://raw.githubusercontent.com/austingreco/ImageListPreference/master/images/screenshot2.png | width=290)
 
 ## Usage
+
+Add to your build.gradle:
+
+```
+compile 'com.austingreco:image-list-preference:1.0.0'
+```
+
+## Using the Preference
 
 Add the `ImageListPreference` to your XML:
 
@@ -38,7 +46,7 @@ Create an array of image resources to use as the `ilp_entryImages` attribute:
 
 ## Attributes
 
-`ImageListPreference` is customizable through attributes:
+`ImageListPreference` is customizable through these attributes:
 
 | name                | type      | description                                                               | default
 |---------------------|-----------|---------------|---------------------------------------------------------------------------------------
@@ -48,10 +56,6 @@ Create an array of image resources to use as the `ilp_entryImages` attribute:
 | ilp_useCard         | boolean   | Wrap the image in a CardView which gives rounded corners and a shadow     | false
 | ilp_itemLayout      | reference | A custom layout resource to use as each item in the list                  |
 
-## Download / Import
+## License
 
-Add to your build.gradle:
-
-```
-compile 'com.austingreco:imagelistpreference:1.0.0'
-```
+MIT
