@@ -5,8 +5,10 @@
 
 A [`ListPreference`](https://developer.android.com/reference/android/preference/ListPreference.html) that shows an image resource for each item.
 
-![](https://raw.githubusercontent.com/austingreco/ImageListPreference/master/images/screenshot1.png | width=290)
-![](https://raw.githubusercontent.com/austingreco/ImageListPreference/master/images/screenshot2.png | width=290)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/austingreco/ImageListPreference/master/images/screenshot1.png" width="250" alt="Screenshot 1" />
+  <img src="https://raw.githubusercontent.com/austingreco/ImageListPreference/master/images/screenshot2.png" width="250" alt="Screenshot 2" />
+</p>
 
 ## Usage
 
