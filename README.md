@@ -5,7 +5,7 @@
 
 A [`ListPreference`](https://developer.android.com/reference/android/preference/ListPreference.html) that shows an image resource for each item.
 
-<p align="center">
+<p>
   <img src="https://raw.githubusercontent.com/austingreco/ImageListPreference/master/images/screenshot1.png" width="250" alt="Screenshot 1" />
   <img src="https://raw.githubusercontent.com/austingreco/ImageListPreference/master/images/screenshot2.png" width="250" alt="Screenshot 2" />
 </p>
@@ -14,7 +14,7 @@ A [`ListPreference`](https://developer.android.com/reference/android/preference/
 
 Add to your build.gradle:
 
-```
+```gradle
 compile 'com.austingreco:image-list-preference:1.0.0'
 ```
 
@@ -22,7 +22,7 @@ compile 'com.austingreco:image-list-preference:1.0.0'
 
 Add the `ImageListPreference` to your XML:
 
-```
+```xml
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
                   xmlns:app="http://schemas.android.com/apk/res-auto">
     <com.austingreco.imagelistpreference.ImageListPreference
@@ -38,7 +38,7 @@ Add the `ImageListPreference` to your XML:
 
 Create an array of image resources to use as the `ilp_entryImages` attribute:
 
-```
+```xml
 <array name="testEntryImages">
     <item>@drawable/ic_android_black_24dp</item>
     <item>@drawable/ic_camera_black_24dp</item>
