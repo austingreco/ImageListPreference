@@ -2,6 +2,7 @@
 
 <a target="_blank" href="https://developer.android.com/about/versions/android-4.0.3.html"><img src="https://img.shields.io/badge/API-15%2B-blue.svg?style=flat" alt="API Version 15" /></a>
 <a target="_blank" href="LICENSE"><img src="http://img.shields.io/:license-mit-blue.svg" alt="License" /></a>
+<a target="_blank" href="https://bintray.com/austingreco/maven/image-list-preference/_latestVersion"><img src="https://api.bintray.com/packages/austingreco/maven/image-list-preference/images/download.svg" /></a>
 
 A [`ListPreference`](https://developer.android.com/reference/android/preference/ListPreference.html) that shows an image resource for each item.
 
@@ -12,10 +13,10 @@ A [`ListPreference`](https://developer.android.com/reference/android/preference/
 
 ## Usage
 
-Add to your build.gradle:
+Add to your `build.gradle` dependencies:
 
 ```gradle
-compile 'com.austingreco:image-list-preference:1.0.0'
+implementation 'com.austingreco:image-list-preference:1.0.0'
 ```
 
 ## Using the Preference
